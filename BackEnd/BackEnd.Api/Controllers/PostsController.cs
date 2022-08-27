@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using BackEnd.Api.Data;
 using BackEnd.Api.Dtos;
 using BackEnd.Api.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

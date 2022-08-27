@@ -1,0 +1,11 @@
+<div *ngIf="post">
+    <h2>Post Details</h2>
+    <div>
+        <label for="photoUrl">Photo url: </label>
+        <input id="photoUrl" [(ngModel)]="post.photoUrl" placeholder="photoUrl">
+    </div>
+    <div>
+        <label for="content">Content: </label>
+        <input id="content" [(ngModel)]="post.content" placeholder="content">
+    </div>
+</div>
