@@ -1,9 +1,23 @@
+<h2>Posts</h2>
+
+<div>
+  <label for="new-post-content">Post Content: </label>
+  <input id="new-post-content" #postContent />
+
+  <label for="new-post-photoUrl">Post Photo Url</label>
+  <input id="new-post-photoUrl" #postphotoUrl />
+
+  <button type="button" class="add-button" (click)="add(postContent.value, postphotoUrl.value); postContent.value='';postphotoUrl.value=''">
+    Add post
+  </button>
+</div>
+
 <ul class="posts">
-    <li *ngFor="let post of posts">
-      <button type="button" [class.selected]="post === selectedPost" (click)="edit(post)">
-        <span class="content">{{post.content}}</span>
-        <span class="content">{{post.photoUrl}}</span>
-      </button>
-    </li>
+  <li *ngFor="let post of posts">
+    <a routerLink="/detail/{{post.id}}">
+      {{post.content}}
+    </a>
+    <button type="button" class="delete" title="delete post"
+      (click)="delete(post)">x</button>
+  </li>
 </ul>
-<app-post [post]="selectedPost"></app-post>

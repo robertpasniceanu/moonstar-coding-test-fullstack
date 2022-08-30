@@ -73,7 +73,7 @@ namespace BackEnd.Api.Controllers
                 return Problem();
             }
 
-            return CreatedAtAction(nameof(GetById), new { newPost.Id }, new { newPost.Id });
+            return CreatedAtAction(nameof(GetById), new { newPost.Id }, newPost);
         }
 
         [HttpPut]

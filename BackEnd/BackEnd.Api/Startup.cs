@@ -41,7 +41,7 @@ namespace BackEnd.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseCors(builder => builder.AllowAnyOrigin());
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
             app.UseSwagger();
             app.UseSwaggerUI(c =>

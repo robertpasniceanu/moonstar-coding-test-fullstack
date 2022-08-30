@@ -7,14 +7,16 @@ import { PostComponent } from './post/post.component';
 import { HeaderComponent } from './header/header.component';
 import { ListComponent } from './list/list.component';
 import { FormsModule } from '@angular/forms'
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
     HeaderComponent,
-    ListComponent
+    ListComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
