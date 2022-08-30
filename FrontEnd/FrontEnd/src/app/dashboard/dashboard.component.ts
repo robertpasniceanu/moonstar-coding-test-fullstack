@@ -20,4 +20,9 @@ export class DashboardComponent implements OnInit {
     this.postsService.getPosts()
       .subscribe(posts => this.posts = posts.slice(1, 5));
   }
+  
+  delete(post: Post): void {
+    this.posts = this.posts.filter(h => h !== post);
+    this.postsService.deletePost(post.id).subscribe();
+  }
 }

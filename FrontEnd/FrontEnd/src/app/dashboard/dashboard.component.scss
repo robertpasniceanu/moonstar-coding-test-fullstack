@@ -3,29 +3,23 @@ h2 {
 }
 
 .posts-menu {
-  padding: 0;
-  margin: auto;
-  max-width: 1000px;
-  display: grid;
-  justify-content: space-around;
+  padding: 10px;
+  margin: auto 0;
 }
 
 a {
-  border-radius: 2px;
-  padding: 1rem;
   font-size: 1.2rem;
   text-decoration: none;
-  display: inline-block;
   color: #000;
-  text-align: center;
   width: 100%;
   min-width: 70px;
   margin: .5rem auto;
   box-sizing: border-box;
+  display: table;
+}
 
-  order: 0;
-  flex: 0 1 auto;
-  align-self: auto;
+img {
+  max-width: 500px;
 }
 
 @media (min-width: 600px) {
